@@ -80,12 +80,42 @@ body {
 }
 
 .button__play {
+  position: relative;
   width: 0;
   height: 0;
   border-top: 3rem solid transparent;
   border-bottom: 3rem solid transparent;
   border-left: 5rem solid #adafb3;
   filter: var(--btn-filter);
+}
+
+.button--broken {
+  overflow: hidden;
+  width: 9.5rem;
+  border-radius: 0;
+}
+
+.button--left-broken {
+  border-top-left-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
+}
+
+.button--right-broken {
+  border-top-right-radius: 2.5rem;
+  border-bottom-right-radius: 2.5rem;
+  top: 12rem;
+}
+
+.button__play--left-broken {
+  left: 5rem;
+}
+
+.button__play--right-broken {
+  left: -5rem;
+}
+
+.button--hide {
+  display: none;
 }
 
 /**********************************/
