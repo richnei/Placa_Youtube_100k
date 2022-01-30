@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /**********************************/
@@ -18,48 +18,80 @@
 /**********************************/
 
 :root {
-    --plaque-shadow: .4rem .4rem 1.8rem #7e7e7e, -.4rem -.4rem 2rem #f8f8f8;
-	--plaque-background: linear-gradient(to bottom, #adafb3 50%, #c7c7c9 80%);
-	
-	--btn-shadow: inset .6rem .6rem .9rem #484541, inset -.4rem -.4rem 1.4rem #5c5c58;
-    --btn-filter: drop-shadow(.1rem .2rem .5rem #424242);
+  --plaque-shadow: 0.4rem 0.4rem 1.8rem #7e7e7e, -0.4rem -0.4rem 2rem #f8f8f8;
+  --plaque-background: linear-gradient(to bottom, #adafb3 50%, #c7c7c9 80%);
 
-	--clr-description: #edeff2;
-	--clr-btn: #868681;
-	--clr-youtube-red: #c00;
-	--clr-youtube-white: #fff;
+  --btn-shadow: inset 0.6rem 0.6rem 0.9rem #484541,
+    inset -0.4rem -0.4rem 1.4rem #5c5c58;
+  --btn-filter: drop-shadow(0.1rem 0.2rem 0.5rem #424242);
 
-	--ff: "Gothic A1", sans-serif;
+  --clr-description: #edeff2;
+  --clr-btn: #868681;
+  --clr-youtube-red: #c00;
+  --clr-youtube-white: #fff;
+
+  --ff: "Gothic A1", sans-serif;
 }
 
 /**********************************/
 /* 1. Estilos gerais
 /**********************************/
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-	background-image: url('http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png');
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/retina_wood.png");
+  font-family: var(--ff);
 }
 
 /**********************************/
 /* 2. Placa
 /**********************************/
 
-
+.plaque {
+  background: var(--plaque-background);
+  width: 43rem;
+  height: 55rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  box-shadow: var(--plaque-shadow);
+  display: flex;
+  justify-content: center;
+}
 
 /**********************************/
 /* 3. Botão
 /**********************************/
 
+.button {
+  background: var(--clr-btn);
+  width: 19rem;
+  height: 13rem;
+  box-shadow: var(--btn-shadow);
+  border-radius: 2.5rem;
+  opacity: 0.7;
+  position: relative;
+  top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.button__play {
+  width: 0;
+  height: 0;
+  border-top: 3rem solid transparent;
+  border-bottom: 3rem solid transparent;
+  border-left: 5rem solid #adafb3;
+  filter: var(--btn-filter);
+}
 
 /**********************************/
 /* 4. Descrição
 /**********************************/
 
-
-
 /**********************************/
 /* 5. Formulario
 /**********************************/
-
-
